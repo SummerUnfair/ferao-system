@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD com.Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ferao.mapper.MUserMapper">
+
+    <!--查询所有（分页）-->
+    <select id="findAll"  resultType="muser">
+      select * from usr
+    </select>
+
+    <!--保存用户-->
+    <insert id="saveUser" parameterType="muser">
+        insert into usr(id,username) values ( #{id},#{username});
+    </insert>
+    <!--更新用户-->
+    <update id="updateUser" parameterType="muser" >
+        update usr set username=#{username} where  id =#{id}
+    </update>
+    <!--删除用户-->
+    <delete id="deleteUser" parameterType="java.lang.Integer">
+        delete from usr where id = #{id}
+    </delete>
+    <!--根据id查询用户-->
+    <select id="findById" parameterType="int" resultType="muser">
+        select * from usr where id=#{uid}
+    </select>
+</mapper>
