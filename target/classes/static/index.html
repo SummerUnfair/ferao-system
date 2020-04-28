@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Ferao-system</title>
+    <script type="text/javascript" src="webjars/jquery/jquery.js" ></script>
+
+    <!-- 测试JQuery 是否加载     如果是undefinition 就是没引入。-->
+    <script>
+        if(typeof jQuery== "undefined"){
+            window.alert("jQuery引用失败!");
+        }else{
+            window.alert("jQuery引用成功!");
+        }
+    </script>
 </head>
 <body>
 Ferao 首页

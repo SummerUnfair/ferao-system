@@ -4,6 +4,7 @@ package com.ferao.service;/*
  * @discription
  */
 
+import com.alibaba.fastjson.JSON;
 import com.ferao.mapper.MUserMapper;
 import com.ferao.pojo.AddressTerm;
 import com.ferao.pojo.MUser;
@@ -16,11 +17,12 @@ import org.elasticsearch.action.admin.indices.analyze.AnalyzeResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class UserService {
@@ -32,7 +34,27 @@ public class UserService {
     private String esIndexName;
     @Value("${spring.date.elasticsearch.hanlp_synonym}")
     public String HANLP_SYNONYM;
+    @Autowired
+    private RedisTemplate<String, String> redisTemplate;
 
+    Map<Object,Object> redisMap = null;
+
+    @PostConstruct
+    public void initRedis(){
+        HashSet<Object> hashSet =new HashSet<>();
+        try {
+            redisMap = redisTemplate.opsForHash().entries("myhash");
+            System.out.println("reids success ..");
+        }catch (Exception e){
+            System.out.println("redis false ..");
+            e.printStackTrace();
+        }
+        for (Object key : redisMap.keySet()) {
+            hashSet.add(redisMap.get(key));
+            System.out.println(key+":"+redisMap.get(key));
+        }
+        System.out.println(hashSet);
+    }
     /**
      * elasticsearch分词
      * @param addr_clean
@@ -70,7 +92,8 @@ public class UserService {
         System.out.println("每页显示数量：" + page.getPageSize());
         System.out.println("总页：" + page.getPages());
         for (MUser mUser : mUsers) {
-            System.out.println(mUser);
+            String jsonString = JSON.toJSONString(mUser);
+            System.out.println(jsonString);
         }
         return mUsers;
     }

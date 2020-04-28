@@ -15,6 +15,7 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
 import java.util.List;
 
 //在templates目录下的所有页面，只能通过controller来跳转，这个需要模板引擎的支持: thymeleaf
@@ -56,13 +57,17 @@ public class UserController {
             @ApiResponse(code=500,message="系统异常")
     })
     @PostMapping("/user/sysUser")
-    public String sysUsers(User user){
-        //springmvc跳转
+    public String sysUsers(User user,Model model){
+
         if (user.getUsername()!=null){
+            model.addAttribute("msg","ferao");
+            model.addAttribute("users", Arrays.asList(user.getUsername(),user.getAge()));
             System.out.println(user);
-            return "redirect:/index2.html";
+            //转发
+            return "User-Messege";
         }else {
-            return "redirect:getUsers1";
+            //springmvc重定向
+            return "redirect:/index2.html";
         }
     }
 
