@@ -1,9 +1,9 @@
-package com.ferao.controller;/*
+package com.ferao.controller;
+/*
  * @author Ferao
  * @date
  * @discription
  */
-
 import com.ferao.pojo.AddressTerm;
 import com.ferao.pojo.MUser;
 import com.ferao.pojo.User;
@@ -21,6 +21,7 @@ import java.util.List;
 //在templates目录下的所有页面，只能通过controller来跳转，这个需要模板引擎的支持: thymeleaf
 @Controller
 @RequestMapping("/users")
+@SuppressWarnings("all")
 public class UserController {
 
     @Autowired

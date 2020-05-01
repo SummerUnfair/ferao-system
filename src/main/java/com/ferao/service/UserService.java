@@ -8,7 +8,6 @@ import com.alibaba.fastjson.JSON;
 import com.ferao.mapper.MUserMapper;
 import com.ferao.pojo.AddressTerm;
 import com.ferao.pojo.MUser;
-import com.ferao.pojo.User;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.elasticsearch.action.admin.indices.analyze.AnalyzeAction;
@@ -17,6 +16,7 @@ import org.elasticsearch.action.admin.indices.analyze.AnalyzeResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
+import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
@@ -96,6 +96,11 @@ public class UserService {
             System.out.println(jsonString);
         }
         return mUsers;
+    }
+
+    public MUser findById(Integer uid){
+        MUser mUser = mUserMapper.findById(uid);
+        return mUser;
     }
 
 }

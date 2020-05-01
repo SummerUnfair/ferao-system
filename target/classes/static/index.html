@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="keywords" content="ferao-system">
+    <meta name="description" content="boot高级项目">
     <title>Ferao-system</title>
     <script type="text/javascript" src="webjars/jquery/jquery.js" ></script>
-
     <!-- 测试JQuery 是否加载     如果是undefinition 就是没引入。-->
     <script>
         if(typeof jQuery== "undefined"){
@@ -15,13 +16,15 @@
     </script>
 </head>
 <body>
-Ferao 首页
-<hr>
-<form action="/users/user/sysUser" method="post" >
-    用户名：<input type="text" name="username" /> <br/>
-    年龄：<input type="text" name="age" /> <br/>
-    <input type="submit" value="提交" />
-</form>
-
+    <h1>&nbsp;ferao首页</h1>
+    <hr>
+    <p>&nbsp;这是一个全能的项目</p>
+    <img src="img/1.png" alt="ferao图片" title="fero悬停文字" width="100" height="100">
+    <form action="/users/user/sysUser" method="post" >
+        <label for="usr" ><strong>用户名：</strong></label> <input id="usr" type="text" name="username"  placeholder="请输入用户名" required maxlength="8" size="16" /><br/>
+        <label for="fage"><strong>年龄：  </strong></label> <input id="fage" type="text" name="age" placeholder="请输入年龄" required maxlength="3" size="16"  /> <br/>
+        <input type="submit" value="提交" />
+    </form>
+    <br/><a href="https://blog.csdn.net/qq_21561501" target="_self">&copy;版权所有ferao</a>
 </body>
 </html>
