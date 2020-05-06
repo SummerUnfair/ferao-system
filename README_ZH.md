@@ -1,6 +1,14 @@
 ###待扩展
 
-UUID.randomUUID()、正则表达式(电话号)、动态SQL、Commons.io、ModelAttribute、LoggerFactory pom文件 trim使用、断言
+正则表达式(电话号)、动态SQL、Commons.io、ModelAttribute、pom文件 trim使用、断言
+
+###新增内容2020/5/6
+
+Logger日志织入、首页自动弹出、redis发布
+
+###新增内容2020/5/2
+
+this关键字、枚举、UUID
 
 ###新增内容2020/5/1
 

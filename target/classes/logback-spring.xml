@@ -4,7 +4,7 @@
 
     <contextName>logback</contextName>
     <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->
-    <property name="log.path" value="D:\\SpringbootTesk\\Ferao-system.log" />
+    <property name="log.path" value="./log/ferao-log.log" />
 
     <!--输出到控制台-->
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
