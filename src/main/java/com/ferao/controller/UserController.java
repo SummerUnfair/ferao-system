@@ -102,7 +102,7 @@ public class UserController {
         return addressTerms;
     }
 
-    @ApiOperation(value = "redis-发布", notes = "redis-发布")
+    @ApiOperation(value = "4.redis-发布", notes = "redis-发布")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "redisContent", value = "发布内容", required = true, paramType = "path", dataType = "String")
     })

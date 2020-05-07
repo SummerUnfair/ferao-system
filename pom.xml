@@ -23,6 +23,7 @@
         <mysql-connector-java>5.1.25</mysql-connector-java>
         <mybatis-spring-boot-starter>2.0.1</mybatis-spring-boot-starter>
         <pagehelper-spring-boot-starter>1.2.10</pagehelper-spring-boot-starter>
+        <druid>1.1.12</druid>
     </properties>
 
     <dependencyManagement>
@@ -130,6 +131,12 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>${fastjson}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${druid}</version>
         </dependency>
     </dependencies>
 
