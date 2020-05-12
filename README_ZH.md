@@ -2,7 +2,11 @@
 
 正则表达式(电话号)、动态SQL、Commons.io、ModelAttribute、pom文件 trim使用、断言
 
-###新增内容2020/5/6
+financial-platform项目-ferao-system项目对比
+
+1.自定义注解,value注解
+
+###新增内容2020/5/7
 
 前端:
     1.增加链接到Druid监控页面功能

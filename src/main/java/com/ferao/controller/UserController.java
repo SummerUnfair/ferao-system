@@ -4,6 +4,7 @@ package com.ferao.controller;
  * @date
  * @discription
  */
+import com.ferao.annotation.SystemLog;
 import com.ferao.pojo.AddressTerm;
 import com.ferao.pojo.MUser;
 import com.ferao.pojo.User;
@@ -51,6 +52,7 @@ public class UserController {
             @ApiResponse(code=500,message="系统异常")
     })
     @ResponseBody
+    @SystemLog(module = "PageHelper使用",methods = "PageHelper使用")
     @GetMapping("/user/{pageNum}/{pageSize}")
     public List<MUser> getUsers(@PathVariable int pageNum, @PathVariable int pageSize, Model model){
         logger.info("用户分页功能进入..");
