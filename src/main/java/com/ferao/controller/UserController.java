@@ -86,7 +86,7 @@ public class UserController {
         }
     }
 
-    @ApiOperation(value = "3.地址名称分词功能", notes = "地址名称分词功能")
+    @ApiOperation(value = "3.地址名称分词功能", notes = "地址名称分词功能(需要开启elasticsearch搜索服务器)")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "addressName", value = "地址名称", required = true, paramType = "path", dataType = "String")
     })
@@ -104,7 +104,7 @@ public class UserController {
         return addressTerms;
     }
 
-    @ApiOperation(value = "4.redis-发布", notes = "redis-发布")
+    @ApiOperation(value = "4.redis-发布", notes = "redis-发布(需要开启redis服务)")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "redisContent", value = "发布内容", required = true, paramType = "path", dataType = "String")
     })

@@ -6,6 +6,19 @@ financial-platform项目-ferao-system项目对比
 
 1.自定义注解,value注解
 
+
+###新增内容2020/5/13
+
+前端:
+    swagger页面notes优化
+    
+后端:
+    增加自定义注解
+
+###新增内容2020/5/12
+
+maven settings配置优化
+
 ###新增内容2020/5/7
 
 前端:
