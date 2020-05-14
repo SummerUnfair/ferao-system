@@ -4,16 +4,22 @@
 
 financial-platform项目-ferao-system项目对比
 
-1.自定义注解,value注解
+1.value注解
 
+###新增内容2020/5/14
+
+后端:
+    增加fastjson的使用
 
 ###新增内容2020/5/13
 
 前端:
-    swagger页面notes优化
+    1.swagger页面notes优化
+    2.增加任务调度中心页面
     
 后端:
-    增加自定义注解
+    1.增加自定义注解
+    2.增加xxljob分布式任务调度框架
 
 ###新增内容2020/5/12
 
