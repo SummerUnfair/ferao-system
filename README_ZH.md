@@ -1,11 +1,25 @@
 ###待扩展
+断言
+后端:
+    1.@value、@ModelAttribute注解
+    2.正则表达式(电话号码)
+    3.动态sql、新增trim使用
+    4.Commons.io
+    5.pom文件优化
+    6.mail文件发送-->ferao-jdbc
+    7.fastjson优化-->feraofpmTest
+    8.新增开源框架spring-batch-->feraospringBranch
+    
+###新增内容2020/5/19
 
-正则表达式(电话号)、动态SQL、Commons.io、ModelAttribute、pom文件 trim使用、断言
-
-financial-platform项目-ferao-system项目对比
-
-1.value注解
-
+前端:
+    1.升级javascript的ECMAScript规范版本至6.0    
+    2.js..增加console.log语句
+###新增内容2020/5/18    
+   
+后端:
+    1.新增@ConfigurationProperties  
+    
 ###新增内容2020/5/14
 
 后端:
@@ -20,10 +34,7 @@ financial-platform项目-ferao-system项目对比
 后端:
     1.增加自定义注解
     2.增加xxljob分布式任务调度框架
-
-###新增内容2020/5/12
-
-maven settings配置优化
+    3.maven settings配置优化
 
 ###新增内容2020/5/7
 
@@ -56,46 +67,39 @@ this关键字、枚举、UUID
 
 ###新增内容2020/4/29
 
-前端:<meta>、<h1>、</p>、&copy;、&nbsp;、<img>、<strong>、<a>
+前端:
+    1.新增标签 <meta>、<h1>、</p>、&copy;、&nbsp;、<img>、<strong>、<a>
 
-后端：ModelAttribute
+后端：
+    2.新增注解 ModelAttribute
 
 ###新增内容2020/4/28
 
-redis、Jquery
+前端:
+    1.Jquery
+
+后端:
+     1.redis
 
 ###新增内容2020/4/27
 
-pom文件增加<properties>、<dependencyManagement>、<developers>
+后端:
+    1.pom文件增加<properties>、<dependencyManagement>、<developers>
+    2.实体类增加 fastJson注解
 
-实体类增加 fastJson注解
+###新增内容2020/4/20
 
-###项目管理工具
-
-git
-
-###搜索服务器
-
-elasticsearch
-
-###数据库技术
-
-Mysql
-
-###结合技术名称
-
-Mybatis、SpringBoot
-
-###实时文档
-
-Swagger
-
-###插件技术
-
-PageHelper、Lombok
-
-###前端交互技术
-
-Themeleaf
+前端:
+    Themeleaf
+    
+后端:
+    1.elasticsearch
+    2.Mysql
+    3.Mybatis
+    4.SpringBoot
+    5.Swagger
+    6.PageHelper
+    7.Lombok
+    8.git
 
 

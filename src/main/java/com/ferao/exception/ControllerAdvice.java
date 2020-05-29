@@ -45,5 +45,4 @@ public class ControllerAdvice {
         map.put("msg", ex.getMessage());
         return map;
     }
-
 }
